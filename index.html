@@ -16,7 +16,7 @@
   
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-page-body">
   <!-- Pure CSS Mobile/Drawer Toggle (No JS required) -->
   <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true">
 
@@ -25,7 +25,7 @@
     <label for="nav-toggle" class="drawer-backdrop" aria-label="Close navigation overlay"></label>
     <aside class="nav-drawer" aria-label="Extended site navigation">
       <div class="drawer-header">
-        <a href="#hero" class="drawer-brand">
+        <a href="index.html" class="drawer-brand">
           <img src="assets/images/logo.webp" alt="Qitchen" class="drawer-logo" width="120" height="32">
         </a>
         <label for="nav-toggle" class="drawer-close-btn" aria-label="Close navigation menu" title="Close Menu">&times;</label>
@@ -36,19 +36,19 @@
           <span class="drawer-label">Menu</span>
           <ul class="drawer-nav-list">
             <li>
-              <label for="nav-toggle"><a href="#hero" class="drawer-nav-link">Home</a></label>
+              <a href="index.html" class="drawer-nav-link active">Home</a>
             </li>
             <li>
-              <label for="nav-toggle"><a href="#menu" class="drawer-nav-link">Menu</a></label>
+              <a href="menu.html" class="drawer-nav-link">Menu</a>
             </li>
             <li>
-              <label for="nav-toggle"><a href="#about" class="drawer-nav-link">About Us</a></label>
+              <a href="about.html" class="drawer-nav-link">About Us</a>
             </li>
             <li>
-              <label for="nav-toggle"><a href="#reservation" class="drawer-nav-link">Reservation</a></label>
+              <a href="reservation.html" class="drawer-nav-link">Reservation</a>
             </li>
             <li>
-              <label for="nav-toggle"><a href="#contact" class="drawer-nav-link">Contact</a></label>
+              <a href="contact.html" class="drawer-nav-link">Contact</a>
             </li>
           </ul>
         </div>
@@ -77,14 +77,12 @@
     </aside>
   </div>
 
-  <div class="page-wrapper">
-    <!-- Main Content Landmark -->
-    <main id="main-content">
+  <div class="page-wrapper home-page-wrapper">
+    <!-- Main Content Landmark (Single Screen Bento Grid - No Scroll on Desktop) -->
+    <main id="main-content" class="home-main">
       
-      <!-- =================================================================
-           Home Bento Grid Section (Hero Video + 3 Highlight Cards)
-           ================================================================= -->
-      <section class="home-bento-section" id="hero" aria-label="Hero and Highlights">
+      <!-- Home Bento Grid Section -->
+      <section class="home-bento-section" aria-label="Hero and Highlights">
         <div class="bento-container">
           
           <!-- Left Column: Hero Video Card with Overlay Navbar -->
@@ -110,7 +108,7 @@
                     <span class="hamburger-line line-3"></span>
                   </label>
 
-                  <a href="#hero" class="nav-brand" aria-label="Qitchen Homepage">
+                  <a href="index.html" class="nav-brand" aria-label="Qitchen Homepage">
                     <img src="assets/images/logo.webp" alt="Qitchen" class="brand-logo" width="130" height="35">
                   </a>
                 </div>
@@ -119,20 +117,20 @@
                 <nav class="site-nav" aria-label="Main Navigation">
                   <ul class="nav-list">
                     <li class="nav-item">
-                      <a href="#menu" class="nav-link">Menu</a>
+                      <a href="menu.html" class="nav-link">Menu</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#about" class="nav-link">About</a>
+                      <a href="about.html" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#reservation" class="nav-btn-book">Book a Table</a>
+                      <a href="reservation.html" class="nav-btn-book">Book a Table</a>
                     </li>
                   </ul>
                 </nav>
               </div>
             </header>
 
-            <!-- Hero Bottom Bar: Single H1 Landmark & Badges -->
+            <!-- Hero Bottom Bar: Single H1 Landmark & Accolades -->
             <div class="hero-bottom-bar">
               <h1 class="hero-title">
                 <span class="title-line">SUSHI</span>
@@ -141,7 +139,7 @@
 
               <!-- Accolades / Social Badges -->
               <div class="hero-badges" aria-label="Featured links and accolades">
-                <a href="#about" class="badge-icon-btn" aria-label="TripAdvisor" title="TripAdvisor">
+                <a href="about.html" class="badge-icon-btn" aria-label="TripAdvisor" title="TripAdvisor">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10"></circle>
                     <circle cx="8.5" cy="10.5" r="2.5"></circle>
@@ -150,14 +148,14 @@
                     <path d="M7 6.5C8.5 5.5 10 5 12 5s3.5.5 5 1.5"></path>
                   </svg>
                 </a>
-                <a href="#about" class="badge-icon-btn" aria-label="Instagram" title="Instagram">
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="badge-icon-btn" aria-label="Instagram" title="Instagram">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
                 </a>
-                <a href="#about" class="badge-icon-btn" aria-label="Michelin Guide" title="Michelin Guide">
+                <a href="about.html" class="badge-icon-btn" aria-label="Michelin Guide" title="Michelin Guide">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                   </svg>
@@ -166,11 +164,11 @@
             </div>
           </div>
 
-          <!-- Right Column: 3 Bento Cards (Menu, Reservation, Our Restaurant) -->
+          <!-- Right Column: 3 Bento Cards Linking to Dedicated Pages -->
           <div class="bento-side-cards">
             
-            <!-- Bento Card 1: Menu -->
-            <a href="#menu" class="bento-card" aria-label="Explore Menu">
+            <!-- Bento Card 1: Menu Page Link -->
+            <a href="menu.html" class="bento-card" aria-label="Explore Menu">
               <div class="bento-card-media">
                 <img src="assets/images/bento/menu-card.webp" alt="Menu" class="bento-card-img" width="800" height="600">
                 <div class="bento-card-gradient"></div>
@@ -186,8 +184,8 @@
               </div>
             </a>
 
-            <!-- Bento Card 2: Reservation -->
-            <a href="#reservation" class="bento-card" aria-label="Book a Reservation">
+            <!-- Bento Card 2: Reservation Page Link -->
+            <a href="reservation.html" class="bento-card" aria-label="Book a Reservation">
               <div class="bento-card-media">
                 <img src="assets/images/bento/reservation-card.webp" alt="Reservation" class="bento-card-img" width="800" height="600">
                 <div class="bento-card-gradient"></div>
@@ -203,8 +201,8 @@
               </div>
             </a>
 
-            <!-- Bento Card 3: Our Restaurant -->
-            <a href="#about" class="bento-card" aria-label="About Our Restaurant">
+            <!-- Bento Card 3: About / Our Restaurant Page Link -->
+            <a href="about.html" class="bento-card" aria-label="About Our Restaurant">
               <div class="bento-card-media">
                 <img src="assets/images/bento/about-card.webp" alt="Our Restaurant" class="bento-card-img" width="800" height="600">
                 <div class="bento-card-gradient"></div>
@@ -219,547 +217,6 @@
                 </span>
               </div>
             </a>
-
-          </div>
-
-        </div>
-      </section>
-
-      <!-- =================================================================
-           Menu Section (Bento / Grid System)
-           ================================================================= -->
-      <section class="menu-section" id="menu" aria-label="Restaurant Menu">
-        <div class="menu-container">
-          <!-- Section Header with Category Tabs -->
-          <div class="menu-top-bar">
-            <div class="menu-title-block">
-              <span class="section-tag">Culinary Selection</span>
-              <h2 class="section-heading">Our Menu</h2>
-            </div>
-
-            <!-- Category Navigation Tabs -->
-            <nav class="menu-tabs-nav" aria-label="Menu Categories">
-              <a href="#menu-maki" class="menu-tab-btn active">Maki</a>
-              <a href="#menu-uramaki" class="menu-tab-btn">Uramaki</a>
-              <a href="#menu-special" class="menu-tab-btn">Special Rolls</a>
-            </nav>
-          </div>
-
-          <div class="menu-categories-list">
-
-        <!-- Category: Maki -->
-        <div class="menu-category-group" id="menu-maki">
-          <div class="category-header-divider">
-            <div class="divider-side divider-left">
-              <span class="ornament-diamond"></span>
-              <span class="divider-line"></span>
-            </div>
-            <h2 class="category-title">Maki</h2>
-            <div class="divider-side divider-right">
-              <span class="divider-line"></span>
-              <span class="ornament-diamond"></span>
-            </div>
-          </div>
-
-          <div class="menu-grid">
-            <!-- Menu Item: Spicy Tuna Maki -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/spicy-tuna-maki.webp" 
-                  alt="Spicy Tuna Maki" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Spicy Tuna Maki</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$5</span>
-                </div>
-                <p class="dish-desc">A tantalizing blend of spicy tuna, cucumber, and avocado, harmoniously rolled in nori and seasoned rice.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Mango Maki -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/mango-maki.webp" 
-                  alt="Mango Maki" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Mango Maki</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$5</span>
-                </div>
-                <p class="dish-desc">Tempura-fried shrimp, cucumber, and cream cheese embrace a center of fresh avocado, delivering a satisfying contrast of textures.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Salmon Maki -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/salmon-maki.webp" 
-                  alt="Salmon Maki" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Salmon Maki</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$5</span>
-                </div>
-                <p class="dish-desc">Shiitake mushrooms, avocado, and pickled daikon radish nestle within a roll of seasoned rice, coated with nutty sesame seeds.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Tuna Maki -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/tuna-maki.webp" 
-                  alt="Tuna Maki" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Tuna Maki</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$5</span>
-                </div>
-                <p class="dish-desc">A vibrant assortment of julienned carrots, bell peppers, and cucumber, tightly encased in a nori-wrapped rice roll.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <!-- Category: Uramaki -->
-        <div class="menu-category-group" id="menu-uramaki">
-          <div class="category-header-divider">
-            <div class="divider-side divider-left">
-              <span class="ornament-diamond"></span>
-              <span class="divider-line"></span>
-            </div>
-            <h2 class="category-title">Uramaki</h2>
-            <div class="divider-side divider-right">
-              <span class="divider-line"></span>
-              <span class="ornament-diamond"></span>
-            </div>
-          </div>
-
-          <div class="menu-grid">
-            <!-- Menu Item: Volcano Delight -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/volcano-delight.webp" 
-                  alt="Volcano Delight" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Volcano Delight</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$12</span>
-                </div>
-                <p class="dish-desc">Creamy crab salad, avocado, and cucumber rolled inside, topped with spicy tuna and drizzled with fiery sriracha sauce.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Rainbow Fusion -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/rainbow-fusion.webp" 
-                  alt="Rainbow Fusion" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Rainbow Fusion</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$12</span>
-                </div>
-                <p class="dish-desc">A colorful blend of fresh tuna, salmon, yellowtail, and avocado, enveloping a core of cucumber and crab stick.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Dragon Elegance -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/dragon-elegance.webp" 
-                  alt="Dragon Elegance" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Dragon Elegance</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$12</span>
-                </div>
-                <p class="dish-desc">Grilled eel and avocado nestled within the roll, draped with slices of ripe avocado resembling dragon scales.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Sunset Serenity -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/sunset-serenity.webp" 
-                  alt="Sunset Serenity" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Sunset Serenity</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$12</span>
-                </div>
-                <p class="dish-desc">Tempura shrimp, cucumber, and spicy mayo embraced by a roll of soy paper, crowned with slices of creamy mango.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Mystic Garden -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/mystic-garden.webp" 
-                  alt="Mystic Garden" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Mystic Garden</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$12</span>
-                </div>
-                <p class="dish-desc">Shiitake mushrooms, asparagus, and cucumber intermingle with crispy tempura bits, blanketed by a layer of sesame seeds.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Ocean Breeze -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/ocean-breeze.webp" 
-                  alt="Ocean Breeze" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Ocean Breeze</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$12</span>
-                </div>
-                <p class="dish-desc">A medley of fresh shrimp, crab stick, and avocado, laced with a gentle touch of zesty yuzu-infused tobiko.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Tokyo Blossom -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/tokyo-blossom.webp" 
-                  alt="Tokyo Blossom" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Tokyo Blossom</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$12</span>
-                </div>
-                <p class="dish-desc">Delicate pink soy paper envelopes a blend of tuna, crab stick, and cucumber, embellished with edible flower petals.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <!-- Category: Special Rolls -->
-        <div class="menu-category-group" id="menu-special">
-          <div class="category-header-divider">
-            <div class="divider-side divider-left">
-              <span class="ornament-diamond"></span>
-              <span class="divider-line"></span>
-            </div>
-            <h2 class="category-title">Special Rolls</h2>
-            <div class="divider-side divider-right">
-              <span class="divider-line"></span>
-              <span class="ornament-diamond"></span>
-            </div>
-          </div>
-
-          <div class="menu-grid">
-            <!-- Menu Item: Sunrise Bliss -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/sunrise-bliss.webp" 
-                  alt="Sunrise Bliss" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Sunrise Bliss</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$16</span>
-                </div>
-                <p class="dish-desc">A delicate combination of fresh salmon, cream cheese, and asparagus, rolled in orange-hued tobiko for a burst of sunrise-inspired flavors.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Mango Tango -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/mango-tango.webp" 
-                  alt="Mango Tango" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Mango Tango</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$16</span>
-                </div>
-                <p class="dish-desc">Tempura shrimp, cucumber, and avocado dance alongside sweet mango slices, drizzled with a tangy mango sauce.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Truffle Indulgence -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/truffle-indulgence.webp" 
-                  alt="Truffle Indulgence" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Truffle Indulgence</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$16</span>
-                </div>
-                <p class="dish-desc">Decadent slices of black truffle grace a roll of succulent wagyu beef, cucumber, and microgreens, culminating in an exquisite umami symphony.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Pacific Firecracker -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/pacific-firecracker.webp" 
-                  alt="Pacific Firecracker" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Pacific Firecracker</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$16</span>
-                </div>
-                <p class="dish-desc">Spicy crab salad, tempura shrimp, and jalapeño peppers combine in a fiery ensemble, accented with a chili-infused aioli.</p>
-              </div>
-            </article>
-            <!-- Menu Item: Eternal Eel -->
-            <article class="menu-card">
-              <div class="dish-thumb-wrap">
-                <img 
-                  src="assets/images/menu/eternal-eel.webp" 
-                  alt="Eternal Eel" 
-                  class="dish-thumb" 
-                  loading="lazy" 
-                  width="140" 
-                  height="95"
-                >
-              </div>
-              <div class="dish-details">
-                <div class="dish-header">
-                  <h3 class="dish-name">Eternal Eel</h3>
-                  <span class="dish-dots"></span>
-                  <span class="dish-price">$16</span>
-                </div>
-                <p class="dish-desc">An enchanting blend of eel tempura, foie gras, and cucumber, elegantly layered with truffle oil and gold leaf for a touch of opulence.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- =================================================================
-           About Us & Story Section (Bento Grid & Accolades)
-           ================================================================= -->
-      <section class="about-section" id="about" aria-label="About Our Restaurant">
-        <div class="about-container">
-          
-          <!-- Left Column: Master Chef & Ambiance Showcase Card -->
-          <article class="about-hero-card">
-            <div class="about-media-wrap">
-              <img 
-                src="assets/images/about/about-hero.webp" 
-                alt="Culinary Craftsmanship at Qitchen" 
-                class="about-hero-img" 
-                loading="lazy" 
-                width="1200" 
-                height="900"
-              >
-              <div class="about-hero-overlay"></div>
-            </div>
-
-            <div class="about-hero-content">
-              <span class="section-tag">About Qitchen</span>
-              <h2 class="about-main-title">Sushi Artistry<br>Redefined</h2>
-              <p class="about-hero-lead">
-                Where culinary craftsmanship meets modern elegance. Indulge in the finest sushi, expertly curated to elevate your dining experience.
-              </p>
-            </div>
-          </article>
-
-          <!-- Right Column: Story Narrative, Accolades & Visual Gallery -->
-          <div class="about-details-column">
-            
-            <!-- Story Narrative Card -->
-            <article class="about-story-card">
-              <div class="story-header">
-                <span class="section-tag">Our Heritage</span>
-                <h3 class="story-title">A Symphony of Japanese Flavors</h3>
-              </div>
-              <p class="story-text">
-                Founded with a devotion to culinary perfection, Qitchen's journey began in the vibrant heart of Prague. Over the years, it evolved into an intimate sanctuary for sushi enthusiasts, celebrated for masterfully balancing time-honored Japanese techniques with contemporary gastronomic artistry.
-              </p>
-              <p class="story-text">
-                Each cut of sashimi and every seasoned grain of rice is treated as a canvas—crafted with obsessive care, supreme freshness, and an unwavering respect for authentic tradition.
-              </p>
-            </article>
-
-            <!-- Accolades & Honors Grid -->
-            <div class="about-accolades-grid" aria-label="Restaurant Recognitions">
-              <div class="accolade-card">
-                <div class="accolade-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="8.5" cy="10.5" r="2.5"></circle>
-                    <circle cx="15.5" cy="10.5" r="2.5"></circle>
-                    <path d="M12 12v3"></path>
-                    <path d="M7 6.5C8.5 5.5 10 5 12 5s3.5.5 5 1.5"></path>
-                  </svg>
-                </div>
-                <div class="accolade-info">
-                  <span class="accolade-source">TripAdvisor</span>
-                  <strong class="accolade-badge">Best Sushi</strong>
-                </div>
-              </div>
-
-              <div class="accolade-card">
-                <div class="accolade-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                  </svg>
-                </div>
-                <div class="accolade-info">
-                  <span class="accolade-source">Michelin Guide</span>
-                  <strong class="accolade-badge">Quality Food</strong>
-                </div>
-              </div>
-
-              <div class="accolade-card">
-                <div class="accolade-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                </div>
-                <div class="accolade-info">
-                  <span class="accolade-source">Atmosphere</span>
-                  <strong class="accolade-badge">Cool Vibe</strong>
-                </div>
-              </div>
-            </div>
-
-            <!-- Visual Atmosphere Gallery Grid -->
-            <div class="about-gallery-grid" aria-label="Restaurant Ambience Gallery">
-              <figure class="gallery-item">
-                <img 
-                  src="assets/images/about/about-slide-1.webp" 
-                  alt="Precision Sushi Craft" 
-                  class="gallery-img" 
-                  loading="lazy" 
-                  width="400" 
-                  height="300"
-                >
-              </figure>
-              <figure class="gallery-item">
-                <img 
-                  src="assets/images/about/about-slide-2.webp" 
-                  alt="Fresh Seasonal Ingredients" 
-                  class="gallery-img" 
-                  loading="lazy" 
-                  width="400" 
-                  height="300"
-                >
-              </figure>
-              <figure class="gallery-item">
-                <img 
-                  src="assets/images/about/about-slide-3.webp" 
-                  alt="Qitchen Dining Room" 
-                  class="gallery-img" 
-                  loading="lazy" 
-                  width="400" 
-                  height="300"
-                >
-              </figure>
-            </div>
 
           </div>
 
