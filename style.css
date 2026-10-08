@@ -1,0 +1,265 @@
+/* ==========================================================================
+   CSS Variables & Design Tokens
+   ========================================================================== */
+:root {
+  /* Color Palette */
+  --color-bg: #070807;
+  --color-card-bg: #111211;
+  --color-text-primary: #efe7d2;
+  --color-text-secondary: rgba(239, 231, 210, 0.72);
+  --color-text-muted: rgba(239, 231, 210, 0.45);
+  --color-gold: #cfbe91;
+  --color-gold-hover: #dfce9f;
+  
+  /* Borders & Glassmorphism */
+  --border-subtle: rgba(239, 231, 210, 0.12);
+  --border-highlight: rgba(239, 231, 210, 0.28);
+  --glass-bg: rgba(18, 19, 18, 0.55);
+  --glass-blur: blur(12px);
+
+  /* Typography */
+  --font-serif: 'Forum', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing & Radii */
+  --page-padding: 16px;
+  --card-radius: 22px;
+  --radius-sm: 8px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Global Reset & Base Rules
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Layout Wrapper
+   ========================================================================== */
+.page-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: var(--page-padding);
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+  width: 100%;
+  flex: 1;
+  min-height: calc(100vh - (var(--page-padding) * 2));
+  display: flex;
+}
+
+.hero-media-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - (var(--page-padding) * 2));
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--color-card-bg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Full-bleed video inside the rounded card */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/* Cinematic Gradient Vignette */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: 
+    linear-gradient(180deg, rgba(7, 8, 7, 0.35) 0%, rgba(7, 8, 7, 0) 30%),
+    linear-gradient(0deg, rgba(7, 8, 7, 0.88) 0%, rgba(7, 8, 7, 0.3) 40%, rgba(7, 8, 7, 0) 70%),
+    radial-gradient(circle at center, rgba(0, 0, 0, 0) 40%, rgba(7, 8, 7, 0.6) 100%);
+  pointer-events: none;
+}
+
+/* Hero Content Grid/Flex layer */
+.hero-inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - (var(--page-padding) * 2));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(24px, 4.5vw, 64px);
+}
+
+.hero-bottom-bar {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Single H1 Title */
+.hero-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 7.5vw, 6.8rem);
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  user-select: none;
+}
+
+.title-line {
+  display: block;
+}
+
+/* Accolades & Social Badges (Bottom Right) */
+.hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.badge-icon-btn svg {
+  width: 18px;
+  height: 18px;
+  transition: var(--transition-smooth);
+}
+
+.badge-icon-btn:hover {
+  color: var(--color-text-primary);
+  border-color: var(--border-highlight);
+  background: rgba(239, 231, 210, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Tablet & Mobile)
+   ========================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --page-padding: 10px;
+    --card-radius: 16px;
+  }
+
+  .hero-inner {
+    padding: 24px 18px;
+  }
+
+  .hero-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 11vw, 3.8rem);
+    line-height: 1.0;
+  }
+
+  .hero-badges {
+    align-self: flex-start;
+    gap: 10px;
+  }
+
+  .badge-icon-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .badge-icon-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --page-padding: 8px;
+    --card-radius: 14px;
+  }
+
+  .hero-section {
+    min-height: calc(100svh - 16px);
+  }
+
+  .hero-media-container {
+    min-height: calc(100svh - 16px);
+  }
+
+  .hero-inner {
+    min-height: calc(100svh - 16px);
+    padding: 20px 16px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 12vw, 3.2rem);
+  }
+}
