@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Qitchen Japanese Restaurant</title>
+  <meta name="description" content="Discover the story of Qitchen. Masterful culinary artistry, authentic Japanese traditions, and modern gastronomy in the heart of Prague.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://framerusercontent.com/images/SQZDQj2gDkUmN9upKjykPnd1NM.png">
+
+  <!-- Google Fonts: Forum & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page-body">
+  <!-- Pure CSS Mobile/Drawer Toggle (No JS required) -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true">
+
+  <!-- Navigation Drawer Overlay (Pure CSS Activated) -->
+  <div class="nav-drawer-overlay">
+    <label for="nav-toggle" class="drawer-backdrop" aria-label="Close navigation overlay"></label>
+    <aside class="nav-drawer" aria-label="Extended site navigation">
+      <div class="drawer-header">
+        <a href="index.html" class="drawer-brand">
+          <img src="assets/images/logo.webp" alt="Qitchen" class="drawer-logo" width="120" height="32">
+        </a>
+        <label for="nav-toggle" class="drawer-close-btn" aria-label="Close navigation menu" title="Close Menu">&times;</label>
+      </div>
+
+      <div class="drawer-body">
+        <div class="drawer-section">
+          <span class="drawer-label">Navigation</span>
+          <ul class="drawer-nav-list">
+            <li>
+              <a href="index.html" class="drawer-nav-link">Home</a>
+            </li>
+            <li>
+              <a href="menu.html" class="drawer-nav-link">Menu</a>
+            </li>
+            <li>
+              <a href="about.html" class="drawer-nav-link active">About Us</a>
+            </li>
+            <li>
+              <a href="reservation.html" class="drawer-nav-link">Reservation</a>
+            </li>
+            <li>
+              <a href="contact.html" class="drawer-nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Grid Usage: Drawer Information Cards -->
+        <div class="drawer-info-grid">
+          <div class="drawer-info-card">
+            <h3 class="info-title">Opening Hours</h3>
+            <p class="info-text">Mon – Fri: 16:00 – 22:30</p>
+            <p class="info-text">Sat & Sun: 12:00 – 23:00</p>
+          </div>
+
+          <div class="drawer-info-card">
+            <h3 class="info-title">Address</h3>
+            <p class="info-text">Václavská 45</p>
+            <p class="info-text">110 00 Praha, Czechia</p>
+          </div>
+
+          <div class="drawer-info-card">
+            <h3 class="info-title">Contact</h3>
+            <p class="info-text"><a href="tel:+420123456789">+420 123 456 789</a></p>
+            <p class="info-text"><a href="mailto:info@qitchen.com">info@qitchen.com</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="page-wrapper inner-page-wrapper">
+    <!-- Unified Floating Island Navbar Landmark (Identical size and position) -->
+    <header class="site-header">
+      <div class="header-inner">
+        <!-- Header Left: Menu Toggle + Brand Logo -->
+        <div class="header-left">
+          <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle navigation menu" title="Open Menu">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+          </label>
+
+          <a href="index.html" class="nav-brand" aria-label="Qitchen Homepage">
+            <img src="assets/images/logo.webp" alt="Qitchen" class="brand-logo" width="100" height="26">
+          </a>
+        </div>
+
+        <!-- Header Right: Semantic Navigation Landmark -->
+        <nav class="site-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="menu.html" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link active">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="reservation.html" class="nav-btn-book">Book a Table</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Landmark -->
+    <main id="main-content">
+      <section class="about-section" aria-label="About Qitchen">
+        <div class="about-split-layout">
+          
+          <!-- Left Column: Sticky Hero Card with Single H1 Landmark -->
+          <div class="about-hero-card">
+            <img 
+              src="assets/images/about/about-hero.webp" 
+              alt="About Qitchen Japanese Restaurant" 
+              class="about-hero-img" 
+              width="2000" 
+              height="2400"
+            >
+            <div class="about-hero-overlay"></div>
+            <div class="about-hero-content">
+              <!-- Single H1 Landmark for the About Page -->
+              <h1 class="about-hero-title">About</h1>
+            </div>
+          </div>
+
+          <!-- Right Column: Content Column -->
+          <div class="about-content-column">
+            
+            <!-- Block A: Artistry Card + Gallery Showcase Carousel -->
+            <div class="about-block-row">
+              <article class="about-text-card">
+                <h2 class="about-section-heading">Sushi Artistry <br>Redefined</h2>
+                <p class="about-text-desc">Where culinary craftsmanship meets modern elegance. Indulge in the finest sushi, expertly curated to elevate your dining experience.</p>
+              </article>
+
+              <div class="about-carousel-showcase">
+                <div class="carousel-container" id="carousel-gallery">
+                  <div class="carousel-track">
+                    <div class="carousel-slide" id="slide-g1">
+                      <img src="assets/images/about/about-gallery-1.webp" alt="Sushi Craftsmanship" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide" id="slide-g2">
+                      <img src="assets/images/about/about-gallery-2.webp" alt="Fresh Sushi Selection" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide" id="slide-g3">
+                      <img src="assets/images/about/about-gallery-3.webp" alt="Artful Dining Experience" class="carousel-img" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="carousel-nav" aria-label="Gallery pagination">
+                    <a href="#slide-g1" class="carousel-dot" aria-label="Gallery image 1"></a>
+                    <a href="#slide-g2" class="carousel-dot" aria-label="Gallery image 2"></a>
+                    <a href="#slide-g3" class="carousel-dot" aria-label="Gallery image 3"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Block B: Real CSS Grid: 3 Awards & Accolades Cards -->
+            <div class="about-awards-grid">
+              <article class="award-card">
+                <div class="award-stars" aria-label="5 stars rating">
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <div class="award-text">
+                  <h3 class="award-title">Trip Advisor</h3>
+                  <p class="award-subtitle">Best Sushi</p>
+                </div>
+              </article>
+
+              <article class="award-card">
+                <div class="award-stars" aria-label="5 stars rating">
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <div class="award-text">
+                  <h3 class="award-title">Michelin Guide</h3>
+                  <p class="award-subtitle">Quality Food</p>
+                </div>
+              </article>
+
+              <article class="award-card">
+                <div class="award-stars" aria-label="5 stars rating">
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <div class="award-text">
+                  <h3 class="award-title">Start Dining</h3>
+                  <p class="award-subtitle">Cool Vibe</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Block C: Story Showcase Carousel + Our Story Card -->
+            <div class="about-block-row">
+              <div class="about-carousel-showcase">
+                <div class="carousel-container" id="carousel-story">
+                  <div class="carousel-track">
+                    <div class="carousel-slide" id="slide-s1">
+                      <img src="assets/images/about/about-story-1.webp" alt="Culinary Passion" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide" id="slide-s2">
+                      <img src="assets/images/about/about-story-2.webp" alt="Traditional Preparation" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide" id="slide-s3">
+                      <img src="assets/images/about/about-story-3.webp" alt="Gourmet Dining" class="carousel-img" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="carousel-nav" aria-label="Story pagination">
+                    <a href="#slide-s1" class="carousel-dot" aria-label="Story image 1"></a>
+                    <a href="#slide-s2" class="carousel-dot" aria-label="Story image 2"></a>
+                    <a href="#slide-s3" class="carousel-dot" aria-label="Story image 3"></a>
+                  </div>
+                </div>
+              </div>
+
+              <article class="about-text-card about-story-text-card">
+                <div class="category-header-divider">
+                  <div class="divider-side divider-left">
+                    <span class="ornament-diamond"></span>
+                    <span class="divider-line"></span>
+                  </div>
+                  <h3 class="category-title">Our Story</h3>
+                  <div class="divider-side divider-right">
+                    <span class="divider-line"></span>
+                    <span class="ornament-diamond"></span>
+                  </div>
+                </div>
+                <p class="about-text-desc about-story-desc">Founded with a passion for culinary excellence, Qitchen's journey began in the heart of Prague. Over years, it evolved into a haven for sushi enthusiasts, celebrated for its artful mastery and devotion to redefining gastronomy.</p>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Semantic Footer Landmark -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-copy">© Qitchen Japanese Restaurant</p>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link">About</a>
+          <span class="footer-sep">♦</span>
+          <a href="reservation.html" class="footer-link">Reservation</a>
+          <span class="footer-sep">♦</span>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
